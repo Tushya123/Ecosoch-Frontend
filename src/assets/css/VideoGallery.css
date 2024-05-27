@@ -1,0 +1,52 @@
+.vdmodal .modal-content {
+  background-color: black;
+}
+
+.vdmodal .modal-content .modal-header {
+  align-self: flex-end;
+  margin-right: 15px;
+  border: 0px;
+}
+.vdmodal .modal-content .modal-header .btn-close {
+  background-color: white;
+}
+.vdmodal .modal-content .modal-body {
+  width: 100% !important;
+  align-items: center;
+  display: flex;
+}
+
+.modalcontrols {
+  font-size: 24px;
+  margin: 0px 10px 0px 10px;
+}
+.modalcontrols:hover {
+  color: white;
+}
+.vdmodal .dropdown-menu.show {
+  inset: 9px auto auto -65px !important;
+  width: 130px;
+}
+.vdmodal .dropdown-menu.show li:hover{
+  background-color: lightgrey;
+}
+.react-share__ShareButton svg {
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  padding: 1px  ;
+}
+.react-share__ShareButton {
+  display: flex;
+  align-items: center;
+  margin: 10px 10px;
+  padding: 5px 0 !important;
+  font-size: 24px;
+}
+.smallscreencaro{
+      display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+ 

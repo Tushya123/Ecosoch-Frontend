@@ -1,0 +1,248 @@
+@media screen and (max-width: 1439px) and (min-width: 1023px) {
+  .translate-middle1 {
+    transform: translate(-79%, 130%) !important;
+  }
+  .num-rw {
+    width: 100%;
+  }
+  p.num-txt {
+    font-size: 90px;
+  }
+  p.number-des {
+    font-size: 20px;
+  }
+  .banner-solari-2-content {
+    padding: 155px 0 !important;
+  }
+  .custom-nav-soalr-about li button {
+    padding: 15px 65px;
+  }
+  #myBtnContainer .btn {
+    width: 145px !important;
+  }
+  .thumbnail-solari-about img {
+    height: 435px !important;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1023px) {
+  p.number-des {
+    font-size: 20px !important;
+    margin-left: -20px !important;
+  }
+  .number-txt {
+    margin-left: 0 !important;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 767px) {
+  .counter-sec {
+    padding: 150px 0 80px 0;
+  }
+  .padding-sec {
+    padding: 60px 0 !important;
+  }
+  .showcase-7 {
+    margin-top: 0;
+  }
+  .carousel-indicators {
+    top: 170px;
+  }
+  #carouselVideoExample.new {
+    height: 70vh;
+  }
+  .single-counter-up-start-solari .main-content p {
+    font-size: 16px;
+  }
+  .single-counter-up-start-solari .main-content .title {
+    font-size: 45px !important;
+  }
+  .translate-middle1 {
+    transform: translate(-79%, 130%) !important;
+  }
+  .banner-solari-2-content {
+    padding: 100px 0 !important;
+  }
+  /* .thumbnail-solari-about {
+    display: none;
+  } */
+  .num-rw {
+    width: 90%;
+  }
+  p.num-txt {
+    font-size: 90px;
+  }
+  p.number-des {
+    font-size: 20px;
+    margin-left: -40px;
+  }
+  .number-txt {
+    margin-left: 40px;
+  }
+  .custom-nav-soalr-about li button {
+    padding: 15px 25px;
+  }
+  .custom-nav-soalr-about li {
+    margin-right: 10px;
+  }
+  .thumbnail-about-six {
+    left: 180px;
+  }
+  .cta-solari-wrapper .left-area .title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 35px;
+    color: #fff;
+    margin-top: 25px;
+  }
+  .rts-single-testimonials-one {
+    min-height: 350px;
+  }
+  .offcanvas-end {
+    width: 220px;
+  }
+  .rts-case-studyes.rts-section-gapBottom {
+    padding-bottom: 0px;
+  }
+  .rts-contact-wrapper-form-area {
+    padding-bottom: 0;
+  }
+  .g-24 {
+    padding-bottom: 0px;
+  }
+  .carousel-caption {
+    top: 200px;
+  }
+  .about-li-res {
+    margin-bottom: 45px !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .carousel-caption.my-act-view {
+    top: 80px;
+  }
+  .carousel-indicators {
+    top: 70px;
+  }
+  .carousel-caption h3 {
+    font-size: 24px;
+    line-height: 26px;
+    margin-top: 0px;
+    color: #fff;
+  }
+  .carousel-indicators button {
+    border-radius: 50%;
+    width: 8px !important;
+    height: 8px !important;
+  }
+  .carousel-fade .carousel-item {
+    position: relative;
+    height: 40vh;
+  }
+  #carouselVideoExample.new {
+    height: 40vh;
+  }
+  .banner-solari-2-content {
+    padding: 60px 0px !important;
+  }
+  .translate-middle1 {
+    transform: translate(-77%, 60%) !important;
+  }
+  .title-big {
+    font-size: 24px !important;
+  }
+  p.num-txt {
+    font-size: 70px;
+  }
+  /* .thumbnail-solari-about {
+    display: none;
+  } */
+  .num-rw {
+    width: 100vw;
+  }
+  p.number-des {
+    margin-left: -30px;
+  }
+  .cta-solari-wrapper .left-area .title {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .cta-solari-wrapper .left-area span.pre span {
+    font-size: 12px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .custom-nav-soalr-about li button {
+    width: 380px;
+  }
+  .cta-solari-wrapper .left-area span.pre span {
+    line-height: 25px;
+  }
+  .carousel-caption .btn {
+    font-size: 12px;
+    padding: 5px 20px;
+  }
+  .gallery img {
+    width: auto;
+  }
+  .map-area-wrapper iframe {
+    width: 100%;
+    height: 150%;
+  }
+  .rts-case-studyes.rts-section-gapBottom {
+    padding-bottom: 0px;
+  }
+  .single-counter-up-start-solari .main-content .title {
+    font-size: 48px !important;
+  }
+  .single-counter-up-start-solari .main-content p {
+    font-size: 16px !important;
+  }
+  .rts-about-area {
+    padding-bottom: 10px !important;
+  }
+  .title-area-left .title {
+    font-size: 24px !important;
+    line-height: 36px !important;
+  }
+  .rts-btn {
+    padding: 15px 30px;
+    font-size: 14px;
+  }
+  .rts-section-gap {
+    padding: 30px 0;
+  }
+  .blog-single-one .thumbnail .inner img {
+    border: 1px solid lightgray;
+    border-radius: 8px;
+  }
+  .thumbnail-about-six img {
+    -ms-interpolation-mode: bicubic;
+    border: 0;
+    vertical-align: middle;
+    max-width: 85%;
+    height: auto;
+    margin-left: 25px;
+  }
+  .thumbnail-about-six .about-move {
+    position: absolute;
+    left: -20px;
+    bottom: -35px;
+    width: 40%;
+  }
+  .whypartner {
+    margin-top: 40px;
+  }
+  .vis-mis {
+    margin-top: 50px;
+  }
+  .rts-single-testimonials-one {
+    min-height: 0px;
+  }
+  .about-li-res {
+    margin-bottom: 45px !important;
+  }
+  .bg-filter {
+    width: 70vw;
+  }
+}

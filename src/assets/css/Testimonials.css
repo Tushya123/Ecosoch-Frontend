@@ -1,0 +1,25 @@
+.bullets {
+  border-radius: 100%;
+  background-color: darkgray;
+  color: darkgray;
+  /* padding: 0px; */
+  width: 10px;
+  line-height: 10px;
+}
+.slick-active .bullets{
+  color: orange;
+  background-color: orange;
+}
+.slick-dots .slick-active {
+  border-radius: 100%;
+  border: 3px solid white;
+  background-color: orange;
+  color: orange;
+  /* padding: 0px; */
+  width: 15px;
+  height: 15px;
+}
+.unordered li{
+  height: auto;
+  width: auto;
+}

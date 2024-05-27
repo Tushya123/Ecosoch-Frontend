@@ -1,0 +1,22 @@
+.com-bg {
+  background-image: url(../../assets/images/Commercial/breadcrumbs.jpeg);
+  background-size: cover;
+}
+.com-bg .bread {
+  background-color: #fff6;
+  padding: 44px;
+}
+.com-bg p.img-hv {
+  color: #000;
+  line-height: 45px;
+  font-size: 42px;
+}
+.technologies-img-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p.dsic.txt-ent {
+    color: #000 !important;
+}
