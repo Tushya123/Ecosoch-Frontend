@@ -23,6 +23,12 @@
   .thumbnail-solari-about img {
     height: 435px !important;
   }
+  .single-counter-up-start-solari .bg-text {
+    font-size: 95px;
+  }
+  .main-content .title {
+    font-size: 65px !important;
+  }
 }
 @media screen and (min-width: 992px) and (max-width: 1023px) {
   p.number-des {
@@ -80,9 +86,9 @@
   .custom-nav-soalr-about li button {
     padding: 15px 25px;
   }
-  .custom-nav-soalr-about li {
+  /* .custom-nav-soalr-about li {
     margin-right: 10px;
-  }
+  } */
   .thumbnail-about-six {
     left: 180px;
   }
@@ -113,6 +119,12 @@
   }
   .about-li-res {
     margin-bottom: 45px !important;
+  }
+  .single-counter-up-start-solari .bg-text {
+    font-size: 75px;
+  }
+  .mobcenter {
+    text-align: center;
   }
 }
 @media screen and (max-width: 767px) {
@@ -244,5 +256,17 @@
   }
   .bg-filter {
     width: 70vw;
+  }
+  .single-counter-up-start-solari .bg-text {
+    font-size: 75px;
+  }
+  .custom-nav-soalr-about li {
+    margin-right: 0px;
+  }
+  .mobcenter {
+    text-align: center;
+  }
+  .project-soalr-wrapper {
+    align-items: center;
   }
 }

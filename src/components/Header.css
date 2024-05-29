@@ -1,0 +1,29 @@
+.nodrpdwn {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #1f1f25;
+  background-color: transparent;
+  box-shadow: none;
+  padding: 5px 5px;
+}
+.drpdwn {
+  font-size: 14px !important;
+  padding: 5px 5px !important;
+  line-height: 16px !important;
+}
+.headaccord {
+  margin: 5px !important;
+}
+.headaccord .accordion-header {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 5px 5px;
+}
+.offcanvas-body {
+  padding-bottom: 50px;
+}
+.offcanvas-title {
+  color: white;
+}

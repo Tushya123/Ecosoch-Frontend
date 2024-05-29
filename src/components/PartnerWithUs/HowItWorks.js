@@ -50,7 +50,7 @@ function HowItWorks() {
         <div className="container">
           <div className="row g-24 align-items-start">
             <div className="col-lg-6">
-              <div className="title-area-left">
+              <div className="title-area-left mobcenter">
                 <p className="pre">
                   <span>How It </span> Works?
                 </p>

@@ -3,7 +3,7 @@ import { FaAngleDown } from "react-icons/fa";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { IoMenu } from "react-icons/io5";
-
+import "./Header.css";
 function Header() {
   const [show, setShow] = useState(false);
 
@@ -34,129 +34,194 @@ function Header() {
                     onHide={handleClose}
                     placement="end"
                     backdrop="true"
+                    scroll="false"
                   >
                     <Offcanvas.Header closeButton>
-                      <Offcanvas.Title>MENU</Offcanvas.Title>
+                      <Offcanvas.Title>Menu</Offcanvas.Title>
                     </Offcanvas.Header>
                     <Offcanvas.Body>
-                      <div className="header-nav main-nav-one">
-                        <ul>
-                          <li className="">
-                            <a className="nav-link" href="/">
-                              Home
-                            </a>
-                          </li>
-                          <li>
-                            <a className="nav-link" href="/projects">
-                              Projects
-                            </a>
-                          </li>
-                          <li className="has-dropdown">
-                            <span className="nav-link">
-                              <a href="/">Solar</a>
-                              &nbsp;
-                              <span>
-                                <FaAngleDown />
-                              </span>
-                            </span>
-                            <ul className="submenu">
-                              <li>
-                                <a href="/">Subsidy Scheme</a>
-                              </li>
-                              <li>
-                                <a href="/commercial">Commercial</a>
-                              </li>
-                              <li>
-                                <a href="/">Systems</a>
-                              </li>
-                              <li>
-                                <a href="/">Consultancy</a>
-                              </li>
-                              <li>
-                                <a href="/">Solutions</a>
-                              </li>
-                              <li>
-                                <a href="/">SolarCare</a>
-                              </li>
-                            </ul>
-                          </li>
-                          <li className="has-dropdown">
-                            <span className="nav-link">
-                              <a className="" href="/">
-                                Knowledge Center
+                      <a href="/" className="logo-area">
+                        <img src="img/logo.png" alt="logo" />
+                      </a>
+                      <div className="accordion-solar-faq">
+                        <div className="accordion" id="accordionExample">
+                          <div className="accordion-item headaccord">
+                            <h2 className="accordion-header" id="headingOne">
+                              <a href="/" className="nodrpdwn">
+                                Home
                               </a>
-                              &nbsp;
-                              <span>
-                                <FaAngleDown />
-                              </span>
-                            </span>
-                            <ul className="submenu">
-                              <li>
-                                <a href="/solarCalculator">Solar Calculator</a>
-                              </li>
-                              <li>
-                                <a href="/">Why Solar?</a>
-                              </li>
-                              <li>
-                                <a href="/">How Solar Works?</a>
-                              </li>
-                              <li>
-                                <a href="/Blogs">Blogs</a>
-                              </li>
-                              <li>
-                                <a href="/">Solar Monitoring</a>
-                              </li>
-                              <li>
-                                <a href="/faq">FAQ</a>
-                              </li>
-                              <li>
-                                <a href="/LatestNewsAndEvents">Latest</a>
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <a className="nav-link" href="/partnerwithus">
-                              Partner with Us
-                            </a>
-                          </li>
-                          <li className="has-dropdown ">
-                            <span className="nav-link">
-                              <a href="/about">About Us</a>
-                              &nbsp;
-                              <span>
-                                <FaAngleDown />
-                              </span>
-                            </span>
-                            <ul className="submenu">
-                              <li>
-                                <a href="/">Vision</a>
-                              </li>
-                              <li>
-                                <a href="/">Our Journey</a>
-                              </li>
-                              <li>
-                                <a href="/">Partners</a>
-                              </li>
-                              <li>
-                                <a href="/awadrsandcertificate">
-                                  Awards and certifications
-                                </a>
-                              </li>
-                              <li>
-                                <a href="/">Customer Referral Policy</a>
-                              </li>
-                              <li>
-                                <a href="/testimonial">Customer Testimonials</a>
-                              </li>
-                              <li>
-                                <a href="/">Media Coverage</a>
-                              </li>
-                              <li className="about-li-res">
-                                <a href="/">Privacy Policy</a>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
+                            </h2>
+                          </div>
+                          <div className="accordion-item headaccord">
+                            <h2 className="accordion-header" id="headingTwo">
+                              <a href="/projects" className="nodrpdwn">
+                                Projects
+                              </a>
+                            </h2>
+                            <div
+                              id="collapseTwo"
+                              className="accordion-collapse collapse"
+                              aria-labelledby="headingTwo"
+                              data-bs-parent="#accordionExample"
+                            >
+                              <div className="accordion-body"></div>
+                            </div>
+                          </div>
+                          <div className="accordion-item headaccord">
+                            <h2 className="accordion-header" id="headingThree">
+                              <button
+                                className="accordion-button collapsed drpdwn"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree"
+                                aria-expanded="false"
+                                aria-controls="collapseThree"
+                              >
+                                Solar{" "}
+                              </button>
+                            </h2>
+                            <div
+                              id="collapseThree"
+                              className="accordion-collapse collapse"
+                              aria-labelledby="headingThree"
+                              data-bs-parent="#accordionExample"
+                            >
+                              <div className="accordion-body">
+                                <ul className="submenu">
+                                  <li className="nav-list">
+                                    <a href="/">Subsidy Scheme</a>
+                                  </li>
+                                  <li className="nav-list">
+                                    <a href="/commercial">Commercial</a>
+                                  </li>
+                                  <li className="nav-list">
+                                    <a href="/">Systems</a>
+                                  </li>
+                                  <li className="nav-list">
+                                    <a href="/">Consultancy</a>
+                                  </li>
+                                  <li className="nav-list">
+                                    <a href="/">Solutions</a>
+                                  </li>
+                                  <li className="nav-list">
+                                    <a href="/">SolarCare</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="accordion-item headaccord">
+                            <h2 className="accordion-header" id="headingFour">
+                              <button
+                                className="accordion-button collapsed drpdwn"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour"
+                                aria-expanded="false"
+                                aria-controls="collapseFour"
+                              >
+                                Knowledge Center{" "}
+                              </button>
+                            </h2>
+                            <div
+                              id="collapseFour"
+                              className="accordion-collapse collapse"
+                              aria-labelledby="headingFour"
+                              data-bs-parent="#accordionExample"
+                            >
+                              <div className="accordion-body">
+                                <ul className="submenu">
+                                  <li className="nav-list">
+                                    <a href="/solarCalculator">
+                                      Solar Calculator
+                                    </a>
+                                  </li>
+                                  <li className="nav-list">
+                                    <a href="/">Why Solar?</a>
+                                  </li>
+                                  <li className="nav-list">
+                                    <a href="/">How Solar Works?</a>
+                                  </li>
+                                  <li className="nav-list">
+                                    <a href="/Blogs">Blogs</a>
+                                  </li>
+                                  <li className="nav-list">
+                                    <a href="/">Solar Monitoring</a>
+                                  </li>
+                                  <li className="nav-list">
+                                    <a href="/faq">FAQ</a>
+                                  </li>
+                                  <li className="nav-list">
+                                    <a href="/LatestNewsAndEvents">Latest</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="accordion-item headaccord">
+                            <h2 className="accordion-header" id="headingOne">
+                              <a href="/partnerwithus" className="nodrpdwn">
+                                Partner With Us
+                              </a>
+                            </h2>
+                          </div>
+                          <div className="accordion-item headaccord">
+                            <h2 className="accordion-header" id="headingFive">
+                              <button
+                                className="accordion-button collapsed drpdwn"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive"
+                                aria-expanded="false"
+                                aria-controls="collapseFive"
+                              >
+                                About Us
+                              </button>
+                            </h2>
+                            <div
+                              id="collapseFive"
+                              className="accordion-collapse collapse"
+                              aria-labelledby="headingFour"
+                              data-bs-parent="#accordionExample"
+                            >
+                              <div className="accordion-body">
+                                <ul className="submenu">
+                                  <li className="nav-list">
+                                    <a href="/about">About Company</a>
+                                  </li>
+                                  <li className="nav-list">
+                                    <a href="/">Vision</a>
+                                  </li>
+                                  <li className="nav-list">
+                                    <a href="/">Our Journey</a>
+                                  </li>
+                                  <li className="nav-list">
+                                    <a href="/">Partners</a>
+                                  </li>
+                                  <li className="nav-list">
+                                    <a href="/awadrsandcertificate">
+                                      Awards and certifications
+                                    </a>
+                                  </li>
+                                  <li className="nav-list">
+                                    <a href="/">Customer Referral Policy</a>
+                                  </li>
+                                  <li className="nav-list">
+                                    <a href="/testimonial">
+                                      Customer Testimonials
+                                    </a>
+                                  </li>
+                                  <li className="nav-list">
+                                    <a href="/">Media Coverage</a>
+                                  </li>
+                                  <li className="nav-list">
+                                    <a href="/">Privacy Policy</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </Offcanvas.Body>
                   </Offcanvas>

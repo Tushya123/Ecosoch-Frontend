@@ -18,5 +18,31 @@
 }
 
 p.dsic.txt-ent {
-    color: #000 !important;
+  color: #000 !important;
+}
+.comercialcountercenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-right-content-area-solar-energy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.single-about-content-solar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.single-about-content-solar p {
+  text-align: justify;
+}
+.nav.custom-nav-soalr-about.nav-pills {
+  justify-content: center;
 }

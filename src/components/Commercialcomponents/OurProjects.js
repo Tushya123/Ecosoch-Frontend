@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from "react";
 
 function OurProjects() {
   return (
@@ -6,14 +6,18 @@ function OurProjects() {
       <div className="rts-Product-area rts-section-gap">
         <div className="container">
           <div className="row mb--70">
+            <div className="col-12 text-center">
+              <p className="title-tag text-center">
+                <span>Our</span> Projects
+              </p>
+            </div>
+            <br />
+            <br />
             <div className="col-lg-12">
               {/* <!-- project title btn main wrapper --> */}
               <div className="project-soalr-wrapper">
                 <div className="title-area">
                   <div className="title-area-left">
-                    <p className="title-tag text-center">
-                      <span>Our</span> Projects
-                    </p>
                     <h2 className="xxx title">
                       Commercial and Industrial Solar Projects
                     </h2>
@@ -123,4 +127,4 @@ function OurProjects() {
   );
 }
 
-export default OurProjects
+export default OurProjects;

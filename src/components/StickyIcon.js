@@ -25,22 +25,15 @@ function StickyIcon() {
   if (isMobile) {
     return (
       <div className="sticky-icon">
-        <a
-          href="/"
-          className="Instagram"
-          style={{ transform: "translate(160px, 0px)" }}
-        >
-          <i className="fas fa-envelope"></i> Get a Quote{" "}
+        <a className="Instagram" style={{ transform: "translate(160px, 0px)" }}>
+          <i className="fas fa-envelope"></i>
+          <a href="mailto:someone@example.com">Get a Quote </a>
         </a>
-        <a
-          href="tel:+918123410101"
-          className="Facebook"
-          style={{ transform: "translate(160px, 0px)" }}
-        >
+        <a className="Facebook" style={{ transform: "translate(160px, 0px)" }}>
           <i className="fas ">
             <FaPhoneAlt />{" "}
           </i>
-          Call Now
+          <a href="tel:+918123410101">Call Now</a>
         </a>
       </div>
     );
@@ -50,7 +43,7 @@ function StickyIcon() {
     <Fragment>
       <div className="sticky-icon">
         <a
-          href="/"
+          href="mailto:someone@example.com"
           className="Instagram"
           style={{
             transform: isVisible1
