@@ -19006,7 +19006,7 @@ nav ul li a {
 
 .single-counter-up-start-solari .main-content .title {
   font-weight: 600;
-  font-size: 70px !important;
+  font-size: 70px;
   line-height: 44px;
   margin-bottom: 20px;
   color: #1e1e2a;
@@ -34119,9 +34119,8 @@ img.img-proj {
   box-shadow: none;
 }
 .nav-list {
-    display: block;
-    padding: 0.5rem 1rem;
-    color: #000000;
-    text-decoration: none;
-  }
-
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #000000;
+  text-decoration: none;
+}
