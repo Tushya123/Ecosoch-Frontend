@@ -1,6 +1,23 @@
-import React, { Fragment } from "react";
+import axios from "axios";
+import React, { Fragment, useEffect, useState } from "react";
 
 function Carousel() {
+  const [sliders, setSliders] = useState([]);
+  useEffect(() => {
+    const fetchSlider = async () => {
+      try {
+        const allSliders = await axios.get(
+          `${process.env.REACT_APP_API_URL_ECOSOCH}/api/auth/get/activeslider`
+        );
+        // console.log(allSliders.data.data);
+        setSliders(allSliders.data.data);
+      } catch (error) {
+        console.log("Error : ", error);
+      }
+    };
+    fetchSlider();
+  }, []);
+
   return (
     <Fragment>
       <div
@@ -12,15 +29,25 @@ function Carousel() {
       >
         {/* <!-- Indicators --> */}
         <div className="carousel-indicators">
-          <button
+          {sliders.map((slide, index) => (
+            <button
+              type="button"
+              data-bs-target="#carouselVideoExample"
+              data-bs-slide-to={index}
+              className={index === 0 && "active"}
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+          ))}
+          {/* <button
             type="button"
             data-bs-target="#carouselVideoExample"
             data-bs-slide-to="0"
             className="active"
             aria-current="true"
             aria-label="Slide 1"
-          ></button>
-          <button
+          ></button> */}
+          {/* <button
             type="button"
             data-bs-target="#carouselVideoExample"
             data-bs-slide-to="1"
@@ -37,12 +64,41 @@ function Carousel() {
             data-bs-target="#carouselVideoExample"
             data-bs-slide-to="3"
             aria-label="Slide 4"
-          ></button>
+          ></button> */}
         </div>
 
         {/* <!-- Inner --> */}
         <div className="carousel-inner ">
-          <div className="carousel-item active">
+          {sliders.map((slide, index) => (
+            <div className={`carousel-item ${index === 0 && "active"}`}>
+              <div className="video-overlay-container">
+                <video className="img-fluid" autoPlay loop muted>
+                  <source
+                    src={`${process.env.REACT_APP_API_URL_ECOSOCH}/${slide.sliderImage}`}
+                    type="video/mp4"
+                  />
+                </video>
+                <div className="carousel-caption my-act-view d-block">
+                  <h3 className="animated fadeIn">
+                    {slide.sliderThumnailDesc}
+                  </h3>
+                  <p>{slide.sliderDesc}</p>
+                  <div className="button-banner">
+                    <a href="/" className="btn rts-btn btn-primary">
+                      Get a Quote
+                    </a>
+                    <a
+                      href="/"
+                      className="btn rts-btn btn-primary m-3 custom-btn"
+                    >
+                      Explore More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+          {/* <div className="carousel-item active">
             <div className="video-overlay-container">
               <video className="img-fluid" autoPlay loop muted>
                 <source
@@ -66,8 +122,8 @@ function Carousel() {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="carousel-item">
+          </div> */}
+          {/* <div className="carousel-item">
             <div className="video-overlay-container">
               <video className="img-fluid" autoPlay loop muted>
                 <source
@@ -141,7 +197,7 @@ function Carousel() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* <!-- Controls --> */}

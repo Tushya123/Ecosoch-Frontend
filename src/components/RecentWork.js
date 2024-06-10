@@ -1,7 +1,24 @@
-import React, { Fragment, useState } from "react";
+import axios from "axios";
+import React, { Fragment, useEffect, useState } from "react";
 
 function RecentWork() {
   const [disp, setDisp] = useState("all");
+  const [projectDetails, setProjectDetails] = useState(null);
+  useEffect(() => {
+    const fetchAllProjects = async () => {
+      try {
+        const allProjects = await axios.get(
+          `${process.env.REACT_APP_API_URL_ECOSOCH}/api/auth/list/projectdetail`
+        );
+        setProjectDetails(allProjects.data);
+        // console.log("all", allProjects.data);
+      } catch (error) {
+        console.log("Error : ", error);
+      }
+    };
+    fetchAllProjects();
+    // console.log("Projects", projectDetails);
+  }, []);
 
   function handleClick(filter) {
     setDisp(filter);
@@ -166,7 +183,21 @@ function RecentWork() {
           </div>
           {disp === "all" ? (
             <div className="gallery sets">
-              <div className="card-new">
+              {projectDetails?.map((project, index) => (
+                <div className="card-new" key={index}>
+                  <a href="/" className="all Residential">
+                    <img
+                      alt=""
+                      src={`${process.env.REACT_APP_API_URL_ECOSOCH}/${project.imageURL}`}
+                    />
+                  </a>
+                  <div className="card-text">
+                    <h6>{project.title}</h6>
+                    <p> {project.subtitle}</p>
+                  </div>
+                </div>
+              ))}
+              {/* <div className="card-new">
                 <a href="/" className="all Residential">
                   <img alt="" src="img/work/work-1.jpeg" />
                 </a>
@@ -174,8 +205,8 @@ function RecentWork() {
                   <h6>On Grid Residential</h6>
                   <p> 3.56 kWp On-Grid Solar System, JP Nagar</p>
                 </div>
-              </div>
-              <div className="card-new">
+              </div> */}
+              {/* <div className="card-new">
                 <a href="/" className="all Industrial Commercial">
                   <img alt="" src="img/work/work-2.jpeg" />
                 </a>
@@ -225,12 +256,30 @@ function RecentWork() {
                     at Yelahanka
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
           ) : null}
           {disp === "apartments" ? (
             <div className="gallery sets">
-              <div className="card-new">
+              {projectDetails
+                ?.filter(
+                  (project) => project.areaTypeDetails[0].types === "Apartments"
+                )
+                .map((project, index) => (
+                  <div key={index} className="card-new">
+                    <a href="" className="all Residential">
+                      <img
+                        alt=""
+                        src={`${process.env.REACT_APP_API_URL_ECOSOCH}/${project.imageURL}`}
+                      />
+                    </a>
+                    <div className="card-text">
+                      <h6>{project.title}</h6>
+                      <p> {project.subtitle}</p>
+                    </div>
+                  </div>
+                ))}
+              {/* <div className="card-new">
                 <a href="/" className="all Apartments">
                   <img alt="" src="img/work/work-3.jpeg" />
                 </a>
@@ -251,12 +300,30 @@ function RecentWork() {
                     at Yelahanka
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
           ) : null}
           {disp === "commercial" ? (
             <div className="gallery sets">
-              <div className="card-new">
+              {projectDetails
+                ?.filter(
+                  (project) => project.areaTypeDetails[0].types === "Commercial"
+                )
+                .map((project, index) => (
+                  <div key={index} className="card-new">
+                    <a href="/" className="all Residential">
+                      <img
+                        alt=""
+                        src={`${process.env.REACT_APP_API_URL_ECOSOCH}/${project.imageURL}`}
+                      />
+                    </a>
+                    <div className="card-text">
+                      <h6>{project.title}</h6>
+                      <p> {project.subtitle}</p>
+                    </div>
+                  </div>
+                ))}
+              {/* <div className="card-new">
                 <a href="/" className="all Industrial Commercial">
                   <img alt="" src="img/work/work-2.jpeg" />
                 </a>
@@ -286,12 +353,30 @@ function RecentWork() {
                   <h6>Appartment, On Grid</h6>
                   <p>Brigade Millennium Jacaranda Apartments, Bangalore</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           ) : null}
           {disp === "industrial" ? (
             <div className="gallery sets">
-              <div className="card-new">
+              {projectDetails
+                ?.filter(
+                  (project) => project.areaTypeDetails[0].types === "Industrial"
+                )
+                .map((project, index) => (
+                  <div key={index} className="card-new">
+                    <a href="/" className="all Residential">
+                      <img
+                        alt=""
+                        src={`${process.env.REACT_APP_API_URL_ECOSOCH}/${project.imageURL}`}
+                      />
+                    </a>
+                    <div className="card-text">
+                      <h6>{project.title}</h6>
+                      <p> {project.subtitle}</p>
+                    </div>
+                  </div>
+                ))}
+              {/* <div className="card-new">
                 <a href="/" className="all Industrial Commercial">
                   <img alt="" src="img/work/work-5.jpeg" />
                 </a>
@@ -311,12 +396,31 @@ function RecentWork() {
                     at Yelahanka
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
           ) : null}
           {disp === "residential" ? (
             <div className="gallery sets">
-              <div className="card-new">
+              {projectDetails
+                ?.filter(
+                  (project) =>
+                    project.areaTypeDetails[0].types === "Residential"
+                )
+                .map((project, index) => (
+                  <div key={index} className="card-new">
+                    <a href="/" className="all Residential">
+                      <img
+                        alt=""
+                        src={`${process.env.REACT_APP_API_URL_ECOSOCH}/${project.imageURL}`}
+                      />
+                    </a>
+                    <div className="card-text">
+                      <h6>{project.title}</h6>
+                      <p> {project.subtitle}</p>
+                    </div>
+                  </div>
+                ))}
+              {/* <div className="card-new">
                 <a href="/" className="all Residential">
                   <img alt="" src="img/work/work-1.jpeg" />
                 </a>
@@ -324,7 +428,7 @@ function RecentWork() {
                   <h6>On Grid Residential</h6>
                   <p> 3.56 kWp On-Grid Solar System, JP Nagar</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           ) : null}
         </div>

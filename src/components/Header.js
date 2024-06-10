@@ -1,11 +1,28 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { IoMenu } from "react-icons/io5";
 import "./Header.css";
+import axios from "axios";
 function Header() {
   const [show, setShow] = useState(false);
+  const [logo, setLogo] = useState(null);
+
+  useEffect(() => {
+    const fetchDetails = async () => {
+      try {
+        const response = await axios.get(
+          `${process.env.REACT_APP_API_URL_ECOSOCH}/api/auth/list/companyDetails`
+        );
+        setLogo(response.data[0].Logo);
+        // console.log("data", response.data[0].Logo);
+      } catch (error) {
+        console.log("Error", error);
+      }
+    };
+    fetchDetails();
+  }, []);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -22,7 +39,11 @@ function Header() {
               <div className="col-lg-12">
                 <div className="main-haeder-wrapper-h2">
                   <a href="/" className="logo-area">
-                    <img src="img/logo.png" alt="logo" />
+                    <img
+                      //
+                      src={`${process.env.REACT_APP_API_URL_ECOSOCH}/${logo}`}
+                      alt="logo"
+                    />
                   </a>
 
                   <Button onClick={handleShow} className="d-lg-none navbtn">
@@ -89,10 +110,13 @@ function Header() {
                               <div className="accordion-body">
                                 <ul className="submenu">
                                   <li className="nav-list">
-                                    <a href="/">Subsidy Scheme</a>
+                                    <a href="/subsidy">Subsidy Scheme</a>
                                   </li>
                                   <li className="nav-list">
                                     <a href="/commercial">Commercial</a>
+                                  </li>
+                                  <li className="nav-list">
+                                    <a href="/apartments">Apartments</a>
                                   </li>
                                   <li className="nav-list">
                                     <a href="/">Systems</a>
@@ -137,16 +161,20 @@ function Header() {
                                     </a>
                                   </li>
                                   <li className="nav-list">
-                                    <a href="/">Why Solar?</a>
+                                    <a href="/whysolar">Why Solar?</a>
                                   </li>
                                   <li className="nav-list">
-                                    <a href="/">How Solar Works?</a>
+                                    <a href="/howsolarworks">
+                                      How Solar Works?
+                                    </a>
                                   </li>
                                   <li className="nav-list">
                                     <a href="/Blogs">Blogs</a>
                                   </li>
                                   <li className="nav-list">
-                                    <a href="/">Solar Monitoring</a>
+                                    <a href="/solarmonitoring">
+                                      Solar Monitoring
+                                    </a>
                                   </li>
                                   <li className="nav-list">
                                     <a href="/faq">FAQ</a>
@@ -189,14 +217,12 @@ function Header() {
                                   <li className="nav-list">
                                     <a href="/about">About Company</a>
                                   </li>
+
                                   <li className="nav-list">
-                                    <a href="/">Vision</a>
+                                    <a href="/ourjourney">Our Journey</a>
                                   </li>
                                   <li className="nav-list">
-                                    <a href="/">Our Journey</a>
-                                  </li>
-                                  <li className="nav-list">
-                                    <a href="/">Partners</a>
+                                    <a href="/partners">Partners</a>
                                   </li>
                                   <li className="nav-list">
                                     <a href="/awadrsandcertificate">
@@ -204,7 +230,9 @@ function Header() {
                                     </a>
                                   </li>
                                   <li className="nav-list">
-                                    <a href="/">Customer Referral Policy</a>
+                                    <a href="/referral">
+                                      Customer Referral Policy
+                                    </a>
                                   </li>
                                   <li className="nav-list">
                                     <a href="/testimonial">
@@ -212,7 +240,7 @@ function Header() {
                                     </a>
                                   </li>
                                   <li className="nav-list">
-                                    <a href="/">Media Coverage</a>
+                                    <a href="/media">Media Coverage</a>
                                   </li>
                                   <li className="nav-list">
                                     <a href="/">Privacy Policy</a>
@@ -246,10 +274,13 @@ function Header() {
                           </a>
                           <ul className="submenu">
                             <li>
-                              <a href="/">Subsidy Scheme</a>
+                              <a href="/subsidy">Subsidy Scheme</a>
                             </li>
                             <li>
                               <a href="/commercial">Commercial</a>
+                            </li>
+                            <li>
+                              <a href="/apartments">Apartments</a>
                             </li>
                             <li>
                               <a href="/">Systems</a>
@@ -274,16 +305,16 @@ function Header() {
                               <a href="/solarCalculator">Solar Calculator</a>
                             </li>
                             <li>
-                              <a href="/">Why Solar?</a>
+                              <a href="/whysolar">Why Solar?</a>
                             </li>
                             <li>
-                              <a href="/">How Solar Works?</a>
+                              <a href="/howsolarworks">How Solar Works?</a>
                             </li>
                             <li>
                               <a href="/Blogs">Blogs</a>
                             </li>
                             <li>
-                              <a href="/">Solar Monitoring</a>
+                              <a href="/solarmonitoring">Solar Monitoring</a>
                             </li>
                             <li>
                               <a href="/faq">FAQ</a>
@@ -304,13 +335,13 @@ function Header() {
                           </a>
                           <ul className="submenu">
                             <li>
-                              <a href="/">Vision</a>
+                              <a href="/about">About Company</a>
                             </li>
                             <li>
-                              <a href="/">Our Journey</a>
+                              <a href="/ourjourney">Our Journey</a>
                             </li>
                             <li>
-                              <a href="/">Partners</a>
+                              <a href="/partners">Partners</a>
                             </li>
                             <li>
                               <a href="/awadrsandcertificate">
@@ -318,13 +349,13 @@ function Header() {
                               </a>
                             </li>
                             <li>
-                              <a href="/">Customer Referral Policy</a>
+                              <a href="/referral">Customer Referral Policy</a>
                             </li>
                             <li>
                               <a href="/testimonial">Customer Testimonials</a>
                             </li>
                             <li>
-                              <a href="/">Media Coverage</a>
+                              <a href="/media">Media Coverage</a>
                             </li>
                             <li>
                               <a href="/">Privacy Policy</a>
@@ -345,7 +376,7 @@ function Header() {
                                     </svg>
                                 </div> --> */}
 
-                    <a href="/" className="rts-btn btn-primary">
+                    <a href="tel:+918123410101" className="rts-btn btn-primary">
                       Reach us : (+91) 8123410101
                     </a>
                   </div>

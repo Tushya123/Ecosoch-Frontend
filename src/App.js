@@ -5,11 +5,13 @@ import "./assets/css/plugins/metismenu.css";
 import "./assets/css/vendor/animate.css";
 // bootstrap
 import "./assets/css/vendor/bootstrap.min.css";
-//custom css
+import "bootstrap/dist/js/bootstrap.min.js";
+
+// custom css
 import "./assets/css/style.css";
 import "./assets/css/lightgallery.min.css";
 import "./assets/css/Responsive.css";
-
+//components
 import Home from "./Pages/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Projects from "./Pages/Projects";
@@ -25,6 +27,15 @@ import CustomerTestimonials from "./Pages/CustomerTestimonials";
 import AboutUs from "./Pages/AboutUs";
 import PartnerWithUs from "./Pages/PartnerWithUs";
 import GoToTopButton from "./components/GoToTopButton";
+import Partners from "./Pages/Partners";
+import SubsidyScheme from "./Pages/SubsidyScheme";
+import Apartments from "./Pages/Apartments";
+import WhySolar from "./Pages/WhySolar";
+import HowSolarWorks from "./Pages/HowSolarWorks";
+import SolarMonitoring from "./Pages/SolarMonitoring";
+import OurJourney from "./Pages/OurJourney";
+import CustomerReferral from "./Pages/CustomerReferral";
+import MediaCoverage from "./Pages/MediaCoverage";
 
 function App() {
   window.addEventListener("scroll", function () {
@@ -57,6 +68,15 @@ function App() {
           <Route path="/testimonial" Component={CustomerTestimonials} />
           <Route path="/about" Component={AboutUs} />
           <Route path="/partnerwithus" Component={PartnerWithUs} />
+          <Route path="/partners" Component={Partners} />
+          <Route path="/subsidy" Component={SubsidyScheme} />
+          <Route path="/apartments" Component={Apartments} />
+          <Route path="/whysolar" Component={WhySolar} />
+          <Route path="/howsolarworks" Component={HowSolarWorks} />
+          <Route path="/solarmonitoring" Component={SolarMonitoring} />
+          <Route path="/ourjourney" Component={OurJourney} />
+          <Route path="/referral" Component={CustomerReferral} />
+          <Route path="/media" Component={MediaCoverage} />
         </Routes>
       </BrowserRouter>
       <Footer />

@@ -12,7 +12,6 @@
 }
 .vdmodal .modal-content .modal-body {
   width: 100% !important;
-  align-items: center;
   display: flex;
 }
 
@@ -27,14 +26,14 @@
   inset: 9px auto auto -65px !important;
   width: 130px;
 }
-.vdmodal .dropdown-menu.show li:hover{
+.vdmodal .dropdown-menu.show li:hover {
   background-color: lightgrey;
 }
 .react-share__ShareButton svg {
   border-radius: 50%;
   height: 25px;
   width: 25px;
-  padding: 1px  ;
+  padding: 1px;
 }
 .react-share__ShareButton {
   display: flex;
@@ -43,10 +42,8 @@
   padding: 5px 0 !important;
   font-size: 24px;
 }
-.smallscreencaro{
-      display: flex;
-    align-items: center;
-    justify-content: center;
-
+.smallscreencaro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
- 

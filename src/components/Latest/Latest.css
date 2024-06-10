@@ -1,6 +1,6 @@
 .latestul .latestlibtn {
   /* color: #f69322 ; */
-   color: #f69322;
+  color: #f69322;
   background-color: white;
   border: 1px solid grey;
   border-top-left-radius: 5px;
@@ -10,14 +10,14 @@
   padding-bottom: 8px;
   margin: 10px;
   margin-bottom: 0;
-      padding-top: 8px;
-    font-weight: 600;
+  padding-top: 8px;
+  font-weight: 600;
 }
-.latestul li{
+.latestul li {
   margin: 5px;
   margin-bottom: 0;
 }
-.latestul .latestlibtn:focus{
+.latestul .latestlibtn.active {
   color: white;
   background-color: #f69322;
 }

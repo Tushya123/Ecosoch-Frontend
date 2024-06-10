@@ -1,36 +1,43 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import "./Latest.css";
 
 function LatestCont() {
+  const [disp, setdisp] = useState("news");
   return (
     <Fragment>
       <div className="container">
         <ul className="nav nav-tabs latestul" id="myTab" role="tablist">
           <li className="" role="presentation">
             <button
-              className="latestlibtn"
-              id="home-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#home-tab-pane"
-              type="button"
-              role="tab"
-              aria-controls="home-tab-pane"
-              aria-selected="true"
-              autoFocus
+              className={`latestlibtn ${disp === "news" && "active"}`}
+              // id="home-tab"
+              // data-bs-toggle="tab"
+              // data-bs-target="#home-tab-pane"
+              // type="button"
+              // role="tab"
+              // aria-controls="home-tab-pane"
+              // aria-selected="true"
+              // autoFocus
+              onClick={() => {
+                setdisp("news");
+              }}
             >
               News
             </button>
           </li>
           <li className="" role="presentation">
             <button
-              className="latestlibtn"
-              id="profile-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#profile-tab-pane"
-              type="button"
-              role="tab"
-              aria-controls="profile-tab-pane"
-              aria-selected="false"
+              className={`latestlibtn ${disp === "events" && "active"}`}
+              // id="profile-tab"
+              // data-bs-toggle="tab"
+              // data-bs-target="#profile-tab-pane"
+              // type="button"
+              // role="tab"
+              // aria-controls="profile-tab-pane"
+              // aria-selected="false"
+              onClick={() => {
+                setdisp("events");
+              }}
             >
               Events
             </button>
@@ -38,11 +45,11 @@ function LatestCont() {
         </ul>
         <div className="tab-content" id="myTabContent">
           <div
-            className="tab-pane fade show active"
-            id="home-tab-pane"
-            role="tabpanel"
-            aria-labelledby="home-tab"
-            tabindex="0"
+            className={`tab-pane fade show ${disp === "news" && "active"}`}
+            // id="home-tab-pane"
+            // role="tabpanel"
+            // aria-labelledby="home-tab"
+            // tabindex="0"
           >
             <div className="row g-24 mt--30">
               <div className="col-lg-6 col-md-6 col-sm-12">
@@ -176,11 +183,11 @@ function LatestCont() {
             </div>
           </div>
           <div
-            className="tab-pane fade cnnt"
-            id="profile-tab-pane"
-            role="tabpanel"
-            aria-labelledby="profile-tab"
-            tabindex="0"
+            className={`tab-pane fade show ${disp === "events" && "active"}`}
+            // id="profile-tab-pane"
+            // role="tabpanel"
+            // aria-labelledby="profile-tab"
+            // tabindex="0"
           >
             <div className="col-lg-6 col-md-6 col-sm-12">
               <div className="single-blog-solaric-sm">

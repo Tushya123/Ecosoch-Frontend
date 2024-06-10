@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 
 function CounterSec() {
   // Function to animate the counter
@@ -9,19 +9,22 @@ function CounterSec() {
 
     let timer = setInterval(function () {
       start += increment;
-      document.getElementById(id).textContent = start;
+      document.getElementById(id).innerText = start;
 
       if (start >= target) {
         clearInterval(timer);
-        document.getElementById(id).textContent = target;
+        document.getElementById(id).innerText = target;
       }
     }, interval);
   }
 
   // Start the animation
-  animateCounter(20, 2000, "count20"); // Target: 20, Duration: 2000ms
-  animateCounter(20, 2000, "count20m");
-  animateCounter(600, 2000, "count600");
+
+  useEffect(() => {
+    animateCounter(20, 2000, "count20"); // Target: 20, Duration: 2000ms
+    animateCounter(20, 2000, "count20m");
+    animateCounter(600, 2000, "count600");
+  }, []);
 
   return (
     <Fragment>

@@ -1,6 +1,23 @@
-import React, { Fragment } from "react";
+import axios from "axios";
+import React, { Fragment, useEffect, useState } from "react";
 
 function OurProjects() {
+  const [ourProjects, setOurProjects] = useState([]);
+  useEffect(() => {
+    const fetchOurProjects = async () => {
+      try {
+        const allProjects = await axios.get(
+          `${process.env.REACT_APP_API_URL_ECOSOCH}/api/auth/list/projectdetail`
+        );
+        setOurProjects(allProjects.data);
+        console.log("all", allProjects.data);
+      } catch (error) {
+        console.log("Error : ", error);
+      }
+    };
+    fetchOurProjects();
+    // console.log("Projects", projectDetails);
+  }, []);
   return (
     <Fragment>
       <div className="rts-Product-area rts-section-gap">
@@ -33,7 +50,29 @@ function OurProjects() {
         </div>
         <div className="container">
           <div className="row g-5">
-            <div className="col-lg-4 col-md-6">
+            <div className="gallery sets">
+              {ourProjects
+                ?.filter(
+                  (project) =>
+                    project.areaTypeDetails[0].types === "Commercial" ||
+                    project.areaTypeDetails[0].types === "Industrial"
+                )
+                .map((project, index) => (
+                  <div key={index} className="card-new">
+                    <a href="" className="all Residential">
+                      <img
+                        alt=""
+                        src={`${process.env.REACT_APP_API_URL_ECOSOCH}/${project.imageURL}`}
+                      />
+                    </a>
+                    <div className="card-text">
+                      <h6>{project.title}</h6>
+                      <p> {project.subtitle}</p>
+                    </div>
+                  </div>
+                ))}
+            </div>
+            {/* <div className="col-lg-4 col-md-6">
               <div className="rts-solar-single-product-one">
                 <a href="#" className="thumbnail">
                   <img src="img/x-1.jpg" alt="project" />
@@ -45,9 +84,8 @@ function OurProjects() {
                   <span>Commercial, Industrial, On-Grid</span>
                 </div>
               </div>
-              {/* <!-- single product area end --> */}
-            </div>
-            <div className="col-lg-4 col-md-6">
+            </div> */}
+            {/* <div className="col-lg-4 col-md-6">
               <div className="rts-solar-single-product-one">
                 <a href="#" className="thumbnail">
                   <img src="img/SCR-20230724-nsq.jpg" alt="project" />
@@ -59,7 +97,6 @@ function OurProjects() {
                   <span>Commercial, Industrial, On-Grid</span>
                 </div>
               </div>
-              {/* <!-- single product area end -->/ */}
             </div>
             <div className="col-lg-4 col-md-6">
               <div className="rts-solar-single-product-one">
@@ -73,7 +110,6 @@ function OurProjects() {
                   <span>Make Your House Lighten</span>
                 </div>
               </div>
-              {/* <!-- single product area end --> */}
             </div>
             <div className="col-lg-4 col-md-6">
               <div className="rts-solar-single-product-one">
@@ -87,7 +123,6 @@ function OurProjects() {
                   <span>Commercial, Institutes</span>
                 </div>
               </div>
-              {/* <!-- single product area end --> */}
             </div>
             <div className="col-lg-4 col-md-6">
               <div className="rts-solar-single-product-one">
@@ -101,7 +136,6 @@ function OurProjects() {
                   <span>Commerical</span>
                 </div>
               </div>
-              {/* <!-- single product area end --> */}
             </div>
             <div className="col-lg-4 col-md-6">
               <div className="rts-solar-single-product-one">
@@ -118,8 +152,7 @@ function OurProjects() {
                   <span>Commercial, On-Grid</span>
                 </div>
               </div>
-              {/* <!-- single product area end --> */}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

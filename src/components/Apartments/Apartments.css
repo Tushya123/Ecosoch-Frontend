@@ -1,0 +1,13 @@
+.Apar-bg {
+  background-image: url(../../assets/images/Apartments/Screenshot-31.png);
+  background-size: cover;
+}
+.Apar-bg .bread {
+  background-color: #fff6;
+  padding: 44px;
+}
+.Apar-bg p.img-hv {
+  color: #000;
+  line-height: 45px;
+  font-size: 42px;
+}
