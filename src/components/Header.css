@@ -27,3 +27,56 @@
 .offcanvas-title {
   color: white;
 }
+.sub-drops {
+  transform: translate3d(214.5px, 0.5px, 0px) !important;
+  min-width: 20rem;
+  padding: 0;
+  border-radius: 0px 0px 10px 10px;
+}
+.sub-drop-btn,
+.sub-drop-btn:hover,
+.sub-drop-btn:focus,
+.sub-drop-btn:active {
+  padding: 12px 35px 12px 0px !important;
+  display: block;
+  color: #1f1f25;
+  font-weight: 700;
+  transition: 0.3s;
+  background-color: white;
+}
+.sub-drop-btn:hover {
+  color: #f69322;
+}
+.sub-drop-btn::after {
+  border: 0 !important;
+}
+.sub-sub-links {
+  padding: 5px !important;
+  margin: 0 !important;
+}
+.menu-sub-drops {
+  min-width: 17rem;
+  padding: 0;
+  border-radius: 0px 0px 10px 10px;
+}
+.small-drop-btn,
+.small-drop-btn:hover,
+.small-drop-btn:focus,
+.small-drop-btn:active,
+.small-drop-btn:visited {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  padding: 0;
+  background-color: white;
+}
+.small-drop-btn::after {
+  border: 0 !important;
+}
+.menu-sub-drops ul li {
+  border-bottom: 1px solid grey;
+}
+.li-dropend:hover .dropdown-menu {
+  display: block;
+  bottom: -140px;
+}

@@ -36,6 +36,17 @@ import SolarMonitoring from "./Pages/SolarMonitoring";
 import OurJourney from "./Pages/OurJourney";
 import CustomerReferral from "./Pages/CustomerReferral";
 import MediaCoverage from "./Pages/MediaCoverage";
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
+import OnGrid from "./Pages/OnGrid";
+import OffGrid from "./Pages/OffGrid";
+import Hybrid from "./Pages/Hybrid";
+import SolarWaterPump from "./Pages/SolarWaterPump";
+import Training from "./Pages/Training";
+import Engineering from "./Pages/Engineering";
+import SolarCare from "./Pages/SolarCare";
+import ProjectDevelopment from "./Pages/ProjectDevelopment";
+import LatestDesc from "./components/Latest/LatestDesc";
+import LatestEventDesc from "./components/Latest/LatestEventDesc";
 
 function App() {
   window.addEventListener("scroll", function () {
@@ -77,6 +88,17 @@ function App() {
           <Route path="/ourjourney" Component={OurJourney} />
           <Route path="/referral" Component={CustomerReferral} />
           <Route path="/media" Component={MediaCoverage} />
+          <Route path="/privacy" Component={PrivacyPolicy} />
+          <Route path="/ongrid" Component={OnGrid} />
+          <Route path="/offgrid" Component={OffGrid} />
+          <Route path="/hybrid" Component={Hybrid} />
+          <Route path="/pump" Component={SolarWaterPump} />
+          <Route path="/training" Component={Training} />
+          <Route path="/engineering" Component={Engineering} />
+          <Route path="/solarcare" Component={SolarCare} />
+          <Route path="/projectdevelopment" Component={ProjectDevelopment} />
+          <Route path="/newnews/:_ID" Component={LatestDesc} />
+          <Route path="/newevent/:_ID" Component={LatestEventDesc} />
         </Routes>
       </BrowserRouter>
       <Footer />

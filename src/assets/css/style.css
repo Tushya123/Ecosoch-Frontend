@@ -9305,7 +9305,7 @@ a:focus,
 a:active {
   text-decoration: none;
   outline: none;
-  color: #f69322;
+  /* color: #f69322; */
 }
 
 a:focus {
@@ -19036,7 +19036,7 @@ nav ul li a {
   border-radius: 7px;
   position: relative;
   z-index: 1;
-  height: 330px;
+  height: 360px;
 }
 
 @media only screen and (max-width: 575px) {
@@ -27219,7 +27219,8 @@ p {
   .author-area
   .authoe {
   margin-bottom: 14px;
-  width: 34%;
+  width: 100px;
+  height: 100px;
 }
 
 .testimonials-review-main-wrapper
@@ -33786,12 +33787,12 @@ input{
 
 .card-new .card-text p {
   color: #000;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
 }
 .card-new .card-text p:hover {
   color: #f69322;
-  font-size: 24px;
+  font-size: 18px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
@@ -34136,6 +34137,6 @@ img.img-proj {
   height: 100px;
   width: 150px;
 }
-.modal-body {
-  /* top:-25px; */
+.color-white {
+  color: white !important;
 }

@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 
-function BoxImage({ Title, url }) {
+function BoxImage({ Title, url, key }) {
   return (
-    <Fragment>
+    <Fragment id={key}>
       <div id="box-with-image" className="col-md-12 position-relative">
         <div className="banner-solari-2-content ptb--200 ">
           <h1>{Title}</h1>

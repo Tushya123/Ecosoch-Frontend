@@ -119,16 +119,196 @@ function Header() {
                                     <a href="/apartments">Apartments</a>
                                   </li>
                                   <li className="nav-list">
-                                    <a href="/">Systems</a>
+                                    {/* <a href="/">Systems</a> */}
+                                    <div className="dropdown menu-sub-drops">
+                                      <button
+                                        className="btn btn-secondary dropdown-toggle small-drop-btn"
+                                        type="button"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                      >
+                                        Systems{" "}
+                                      </button>
+                                      <ul className="dropdown-menu">
+                                        <li>
+                                          <a
+                                            className="sub-sub-links"
+                                            href="/ongrid"
+                                          >
+                                            On Grid Solar PV System
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a
+                                            className="sub-sub-links"
+                                            href="/offgrid"
+                                          >
+                                            Off-Grid System
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a
+                                            className="sub-sub-links"
+                                            href="/hybrid"
+                                          >
+                                            Hybrid System
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a
+                                            className="sub-sub-links"
+                                            href="/pump"
+                                          >
+                                            Solar Water Pump
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </div>
                                   </li>
                                   <li className="nav-list">
-                                    <a href="/">Consultancy</a>
+                                    {/* <a href="/">Consultancy</a> */}
+                                    <div className="dropdown menu-sub-drops">
+                                      <button
+                                        className="btn btn-secondary dropdown-toggle small-drop-btn"
+                                        type="button"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                      >
+                                        Consultancy{" "}
+                                      </button>
+                                      <ul className="dropdown-menu">
+                                        <li>
+                                          <a
+                                            className="sub-sub-links"
+                                            href="/projectdevelopment"
+                                          >
+                                            Project Development
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a
+                                            className="sub-sub-links"
+                                            href="/engineering"
+                                          >
+                                            Engg. & Design
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a
+                                            className="sub-sub-links"
+                                            href="/solarcare"
+                                          >
+                                            Operations & Maintanence
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a
+                                            className="sub-sub-links"
+                                            href="/training"
+                                          >
+                                            Training
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </div>
                                   </li>
                                   <li className="nav-list">
-                                    <a href="/">Solutions</a>
+                                    {/* <a href="/">Solutions</a> */}
+                                    <div className="dropdown menu-sub-drops">
+                                      <button
+                                        className="btn btn-secondary dropdown-toggle small-drop-btn"
+                                        type="button"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                      >
+                                        Solutions{" "}
+                                      </button>
+                                      <ul className="dropdown-menu">
+                                        <li>
+                                          <a className="sub-sub-links" href="/">
+                                            Reduce Power Bills
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a className="sub-sub-links" href="/">
+                                            Relief From PowerCuts
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a className="sub-sub-links" href="/">
+                                            Finance
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a className="sub-sub-links" href="/">
+                                            Elevated Structures
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a className="sub-sub-links" href="/">
+                                            Tiled Roofs
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a className="sub-sub-links" href="/">
+                                            Non Penetrating Structures
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a className="sub-sub-links" href="/">
+                                            Anti Theft
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </div>
                                   </li>
                                   <li className="nav-list">
-                                    <a href="/">SolarCare</a>
+                                    {/* <a href="/">SolarCare</a> */}
+                                    <div className="dropdown menu-sub-drops">
+                                      <button
+                                        className="btn btn-secondary dropdown-toggle small-drop-btn"
+                                        type="button"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                      >
+                                        Solar Care{" "}
+                                      </button>
+                                      <ul className="dropdown-menu menu-sub-drops">
+                                        <li>
+                                          <a
+                                            className="sub-sub-links"
+                                            href="/solarcare"
+                                          >
+                                            Introduction
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a className="sub-sub-links" href="/">
+                                            Module Cleaning
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a className="sub-sub-links" href="/">
+                                            Upgrade / Revamp
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a className="sub-sub-links" href="/">
+                                            Third-Party Inspection
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a className="sub-sub-links" href="/">
+                                            Thermal Inspection
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a className="sub-sub-links" href="/">
+                                            Solar Maintenance of Rooftop Plants
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </div>
                                   </li>
                                 </ul>
                               </div>
@@ -243,7 +423,7 @@ function Header() {
                                     <a href="/media">Media Coverage</a>
                                   </li>
                                   <li className="nav-list">
-                                    <a href="/">Privacy Policy</a>
+                                    <a href="/privacy">Privacy Policy</a>
                                   </li>
                                 </ul>
                               </div>
@@ -282,17 +462,184 @@ function Header() {
                             <li>
                               <a href="/apartments">Apartments</a>
                             </li>
-                            <li>
-                              <a href="/">Systems</a>
+                            <li className="li-dropend">
+                              {/* <a href="/">Systems</a> */}
+                              <div className="btn-group dropend">
+                                <button
+                                  type="button"
+                                  className="btn btn-secondary dropdown-toggle sub-drop-btn"
+                                  aria-expanded="false"
+                                >
+                                  Systems
+                                </button>
+                                <ul className="dropdown-menu sub-drops">
+                                  <li>
+                                    <a className="sub-sub-links" href="/ongrid">
+                                      On Grid Solar PV System
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a
+                                      className="sub-sub-links"
+                                      href="/offgrid"
+                                    >
+                                      Off-Grid System
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a className="sub-sub-links" href="/hybrid">
+                                      Hybrid System
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a className="sub-sub-links" href="/pump">
+                                      Solar Water Pump
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
                             </li>
-                            <li>
-                              <a href="/">Consultancy</a>
+                            <li className="li-dropend">
+                              {/* <a href="/">Consultancy</a> */}
+                              <div className="btn-group dropend">
+                                <button
+                                  type="button"
+                                  className="btn btn-secondary dropdown-toggle sub-drop-btn"
+                                  aria-expanded="false"
+                                >
+                                  Consultancy
+                                </button>
+                                <ul className="dropdown-menu sub-drops">
+                                  <li>
+                                    <a
+                                      className="sub-sub-links"
+                                      href="/projectdevelopment"
+                                    >
+                                      Project Development
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a
+                                      className="sub-sub-links"
+                                      href="/engineering"
+                                    >
+                                      Engg. & Design
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a
+                                      className="sub-sub-links"
+                                      href="/solarcare"
+                                    >
+                                      Operations & Maintanence
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a
+                                      className="sub-sub-links"
+                                      href="/training"
+                                    >
+                                      Training
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
                             </li>
-                            <li>
-                              <a href="/">Solutions</a>
+                            <li className="li-dropend">
+                              {/* <a href="/">Solutions</a> */}
+                              <div className="btn-group dropend">
+                                <button
+                                  type="button"
+                                  className="btn btn-secondary dropdown-toggle sub-drop-btn"
+                                  aria-expanded="false"
+                                >
+                                  Solutions
+                                </button>
+                                <ul className="dropdown-menu sub-drops">
+                                  <li>
+                                    <a className="sub-sub-links" href="/">
+                                      Reduce Power Bills
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a className="sub-sub-links" href="/">
+                                      Relief From PowerCuts
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a className="sub-sub-links" href="/">
+                                      Finance
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a className="sub-sub-links" href="/">
+                                      Elevated Structures
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a className="sub-sub-links" href="/">
+                                      Tiled Roofs
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a className="sub-sub-links" href="/">
+                                      Non Penetrating Structures
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a className="sub-sub-links" href="/">
+                                      Anti Theft
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
                             </li>
-                            <li>
-                              <a href="/">SolarCare</a>
+                            <li className="li-dropend">
+                              {/* <a href="/">SolarCare</a> */}
+                              <div className="btn-group dropend">
+                                <button
+                                  type="button"
+                                  className="btn btn-secondary dropdown-toggle sub-drop-btn"
+                                  aria-expanded="false"
+                                >
+                                  Solar Care
+                                </button>
+                                <ul className="dropdown-menu sub-drops">
+                                  <li>
+                                    <a
+                                      className="sub-sub-links"
+                                      href="/solarcare"
+                                    >
+                                      Introduction
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a className="sub-sub-links" href="/">
+                                      Module Cleaning
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a className="sub-sub-links" href="/">
+                                      Upgrade / Revamp
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a className="sub-sub-links" href="/">
+                                      Third-Party Inspection
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a className="sub-sub-links" href="/">
+                                      Thermal Inspection
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a className="sub-sub-links" href="/">
+                                      Solar Maintenance of Rooftop Plants
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
                             </li>
                           </ul>
                         </li>
@@ -358,7 +705,7 @@ function Header() {
                               <a href="/media">Media Coverage</a>
                             </li>
                             <li>
-                              <a href="/">Privacy Policy</a>
+                              <a href="/privacy">Privacy Policy</a>
                             </li>
                           </ul>
                         </li>

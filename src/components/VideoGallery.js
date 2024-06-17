@@ -58,7 +58,7 @@ function VideoGallery() {
           `${process.env.REACT_APP_API_URL_ECOSOCH}/api/auth/get/Testimonials`
         );
         setVg(response.data); // Ensure you are setting the state with the correct data
-        console.log(response.data);
+        // console.log(response.data);
       } catch (error) {
         console.log("Error fetching testimonials: ", error);
       }

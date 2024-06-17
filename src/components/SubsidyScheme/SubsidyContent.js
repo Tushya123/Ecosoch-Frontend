@@ -1,22 +1,22 @@
 import React from "react";
-import { Container, Table } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 function SubsidyContent() {
   return (
     <>
       <Container fluid style={{ width: "80%", maxWidth: "1200px" }}>
         <div className="subsidy-content-wrapper">
-          <div class="row ">
-            <div class="col-lg-12">
-              <div class="title-area-center">
-                <p class="title-tag">
+          <div className="row ">
+            <div className="col-lg-12">
+              <div className="title-area-center">
+                <p className="title-tag">
                   About The <span>Solar Subsidy Scheme </span>
                 </p>
               </div>
             </div>
           </div>
           <br />
-          <p class="disc">
+          <p className="disc">
             The Central Govt. has launched the{" "}
             <b> PM – Surya Ghar: Muft Bijli Yojana </b>through which residential
             customers (Individual homeowners) can install solar rooftop system
@@ -41,10 +41,10 @@ function SubsidyContent() {
             to understand more about this scheme.
           </p>
           {/* Who is Eligible for Subsidy? */}
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="solari-title-area-three text-center">
-                <span class="pre-title">Who is Eligible for Subsidy?</span>
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="solari-title-area-three text-center">
+                <span className="pre-title">Who is Eligible for Subsidy?</span>
               </div>
             </div>
           </div>
@@ -57,20 +57,20 @@ function SubsidyContent() {
             </ul>
           </p>
           {/* How much is the Subsidy? */}
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="solari-title-area-three text-center">
-                <span class="pre-title">How much is the Subsidy?</span>
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="solari-title-area-three text-center">
+                <span className="pre-title">How much is the Subsidy?</span>
               </div>
             </div>
           </div>
-          <h6 class="text-center subsidy-heads">
-            <div class="word-line">
+          <h6 className="text-center subsidy-heads">
+            <div className="word-line">
               Below is the PM – Surya Ghar: Muft Bijli Yojana.
             </div>
           </h6>
-          <p class="text-center subsidy-main-heads">
-            <div class="word-line">
+          <p className="text-center subsidy-main-heads">
+            <div className="word-line">
               <u>Subsidy for residential households</u>
             </div>
           </p>
@@ -88,8 +88,8 @@ function SubsidyContent() {
               </li>
             </ul>
           </p>
-          <p class="text-center subsidy-main-heads">
-            <div class="word-line">
+          <p className="text-center subsidy-main-heads">
+            <div className="word-line">
               <u>Suitable Rooftop Solar Plant Capacity for households</u>
             </div>
           </p>
@@ -97,8 +97,8 @@ function SubsidyContent() {
             <img src="assets/images/SubsidyBanner/download.png" alt="" />
           </div>
           <br />
-          <p class="text-center subsidy-main-heads">
-            <div class="word-line">
+          <p className="text-center subsidy-main-heads">
+            <div className="word-line">
               <u>
                 Subsidy for Group Housing Society/ Resident Welfare Association
               </u>
@@ -135,10 +135,10 @@ function SubsidyContent() {
           <br />
           {/* Highlights of the scheme */}
           <br />
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="solari-title-area-three text-center">
-                <span class="pre-title">Highlights of the scheme</span>
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="solari-title-area-three text-center">
+                <span className="pre-title">Highlights of the scheme</span>
               </div>
             </div>
           </div>
@@ -163,10 +163,10 @@ function SubsidyContent() {
           <br />
           {/* What can we offer */}
           <br />
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="solari-title-area-three text-center">
-                <span class="pre-title">What we can offer</span>
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="solari-title-area-three text-center">
+                <span className="pre-title">What we can offer</span>
               </div>
             </div>
           </div>

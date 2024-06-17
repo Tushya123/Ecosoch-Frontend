@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import Curv from "./Curv";
 import { register } from "swiper/element";
 import "swiper/css";
@@ -8,11 +8,28 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../assets/css/Testimonials.css";
+import axios from "axios";
 
 // import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 register();
 function Testimonials() {
+  const [testimonials, setTestimonials] = useState([]);
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        const response = await axios.get(
+          `${process.env.REACT_APP_API_URL_ECOSOCH}/api/auth/list/CustomerTestimonial`
+        );
+        setTestimonials(response.data);
+        console.log("Testimonials", response.data);
+      } catch (error) {
+        console.log("Error", error);
+      }
+    };
+    fetchTestimonials();
+  }, []);
+
   const settings = {
     className: "center",
     // adaptiveHeight: true,
@@ -53,54 +70,8 @@ function Testimonials() {
                 <div className="title-new">
                   <h1 className="title-tag">Testimonials</h1>
                 </div>
-                <h6 className="title skew-up text-white mb-0" style={{opacity: "1"}}>
-                  <div
-                    className="word-line"
-                    style={{display: "block", textAlign: "center", width: "100%"}}
-                  >
-                    <div
-                      className="word"
-                      style={{display: "inline-block", translate: "none", rotate: "none", scale: "none", transform: "translate(0px, 0%)"}}
-                    >
-                      Words
-                    </div>{" "}
-                    <div
-                      className="word"
-                      style={{display: "inline-block", translate: "none", rotate: "none", scale: "none", transform: "translate(0px, 0%)"}}
-                    >
-                      from
-                    </div>{" "}
-                    <div
-                      className="word"
-                      style={{display: "inline-block", translate: "none", rotate: "none", scale: "none", transform: "translate(0px, 0%)"}}
-                    >
-                      Our
-                    </div>{" "}
-                    <div
-                      className="word"
-                      style={{display: "inline-block", translate: "none", rotate: "none", scale: "none", transform: "translate(0px, 0%)"}}
-                    >
-                      Solar
-                    </div>{" "}
-                    <div
-                      className="word"
-                      style={{display: "inline-block", translate: "none", rotate: "none", scale: "none", transform: "translate(0px, 0%)"}}
-                    >
-                      Roof-Top
-                    </div>{" "}
-                    <div
-                      className="word"
-                      style={{display: "inline-block", translate: "none", rotate: "none", scale: "none", transform: "translate(0px, 0%)"}}
-                    >
-                      System
-                    </div>{" "}
-                    <div
-                      className="word"
-                      style={{display: "inline-block", translate: "none", rotate: "none", scale: "none", transform: "translate(0px, 0%)"}}
-                    >
-                      Owners
-                    </div>
-                  </div>
+                <h6 className="title text-white mb-0">
+                  Words from Our Solar Roof-Top System Owners
                 </h6>
               </div>
             </div>
@@ -110,41 +81,28 @@ function Testimonials() {
               <div className="testimonials-review-main-wrapper">
                 <div className="swiper mySwiper-testimonials-solari">
                   <Slider {...settings}>
-                    <div className="swiper-slide">
-                      <div className="single-review-area-soalri ">
-                        <img
-                          src="assets/images/testimonials/07.png"
-                          alt="testimonaials"
-                          className="quote"
-                        />
-                        <p className="dsic">
-                          “With a smiling, patient leader and dedicated team,
-                          EcoSoch Solar team work together to complete the
-                          project as per commitment with total transparency.
-                          They did not bother us with anything nor we had to
-                          follow up with them. They were also helpful in getting
-                          the permits for net-metering done without any hassles.
-                          Great team, All the best”
-                        </p>
-                        <div className="author-area">
+                    {testimonials?.map((testimonial) => (
+                      <div className="swiper-slide">
+                        <div className="single-review-area-soalri ">
                           <img
-                            src="img/c-3.jpg"
-                            alt="imag"
-                            className="authoe"
+                            src="assets/images/testimonials/07.png"
+                            alt="testimonaials"
+                            className="quote"
                           />
-                          <h6 className="title">Susan & Neel</h6>
-                          <div className="star-area">
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
+                          <p className="dsic">{testimonial.description}</p>{" "}
+                          <div className="author-area">
+                            <img
+                              src={`${process.env.REACT_APP_API_URL_ECOSOCH}/${testimonial.newImage}`}
+                              alt="imag"
+                              className="authoe"
+                            />
+                            <h6 className="title">{testimonial.Name}</h6>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    ))}
 
-                    <div className="swiper-slide">
+                    {/* <div className="swiper-slide">
                       <div className="single-review-area-soalri">
                         <img
                           src="assets/images/testimonials/07.png"
@@ -166,26 +124,10 @@ function Testimonials() {
                             className="authoe"
                           />
                           <h6 className="title">Kishore Balasubramanya</h6>
-
-                          <div className="star-area">
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                          </div>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                   </Slider>
-
-                  {/* <div
-                    className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"
-                    id="pagination"
-                  >
-                    <span className="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
-                    <span className="swiper-pagination-bullet"></span>
-                  </div> */}
                 </div>
               </div>
             </div>

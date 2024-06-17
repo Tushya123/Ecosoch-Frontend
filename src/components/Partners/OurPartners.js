@@ -214,14 +214,12 @@ const OurPartners = () => {
                       </p>
                     </div>
                     <hr />
-                    <div
-                      className="single-about-content-solar"
-                      style={{ borderBottom: "1px solid black" }}
-                    >
+                    <div className="single-about-content-solar">
                       <div className="row txt-alg">
                         <div className="col-lg-12 technologies-img-wrapper">
                           <div className="left-area-wrapper">
                             <img
+                              className="ptb--10"
                               src="assets/images/Partners/logo.jpg"
                               alt="about"
                             />
@@ -229,12 +227,14 @@ const OurPartners = () => {
                         </div>
                       </div>
                       <p className="disc">
-                        Electronica Finance Ltd, incorporated in 1990, is a part
-                        of the SRP Electronica Group and a pioneer in the field
-                        of Machine Finance. After an eventful journey of close
-                        to 3 decades, EFL today has more than 50 offices across
-                        the country, has served more than 7500 customers and has
-                        an AUM in excess of Rs.1250 crores.
+                        CreditFair connects personal loan borrowers with
+                        investors. They makes entire borrowing process simple
+                        and user friendly and you can get your solar loan funded
+                        in as little as 48 hours.
+                      </p>
+                      <p className="disc">
+                        EcoSoch has tied up with CreditFair to offer Rooftop
+                        Solar Loans exclusively for residential sector
                       </p>
                     </div>
                   </div>

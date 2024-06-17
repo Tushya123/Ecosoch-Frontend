@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import Carousel from "../components/Carousel";
 import CounterSec from "../components/CounterSec";
 import BoxImage from "../components/BoxImage";
@@ -9,17 +9,36 @@ import Testimonials from "../components/Testimonials";
 import VideoGallery from "../components/VideoGallery";
 import ContactUs from "../components/ContactUs";
 import StickyIcon from "../components/StickyIcon";
- 
+import axios from "axios";
+
 function Home() {
+  const [boxImage, setBoxImage] = useState([]);
+  useEffect(() => {
+    const fetchBoximg = async () => {
+      try {
+        const boxImg = await axios.get(
+          `${process.env.REACT_APP_API_URL_ECOSOCH}/api/auth/list/HomeProject`
+        );
+        setBoxImage(boxImg.data);
+        // console.log("A", boxImg.data);
+      } catch (error) {
+        console.log("Error : ", error);
+      }
+    };
+    fetchBoximg();
+  }, []);
   return (
     <Fragment>
       <Carousel />
       <CounterSec />
-      <BoxImage Title={"Residential"} url={"./img/work/Residential.jpg"} />
-      <BoxImage Title={"Commercial"} url={"./img/work/commercial.jpg"} />
-      <BoxImage Title={"Appartments"} url={"./img/work/apartment-1.jpg"} />
-      <BoxImage Title={"Industries"} url={"./img/work/industry.jpg"} />
-      <BoxImage Title={"Ev Charging"} url={"./img/work/ev-charging.jpg"} />
+      {boxImage?.map((box, index) => (
+        <BoxImage
+          key={index}
+          Title={box.Title}
+          url={`${process.env.REACT_APP_API_URL_ECOSOCH}/${box.HomeImage}`}
+        />
+      ))}
+
       <AboutCompany />
       <Customers />
       <RecentWork />
