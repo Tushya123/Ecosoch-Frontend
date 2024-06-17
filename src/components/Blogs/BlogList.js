@@ -5,6 +5,7 @@ import { BsTags } from "react-icons/bs";
 import { TfiArrowTopRight } from "react-icons/tfi";
 import axios from "axios";
 import moment from "moment/moment";
+import { Link } from "react-router-dom";
 
 function BlogList() {
   const [blog, setBlog] = useState(null);
@@ -15,7 +16,7 @@ function BlogList() {
           `${process.env.REACT_APP_API_URL_ECOSOCH}/api/auth/list/blogs`
         );
         setBlog(response.data);
-        console.log("data", response.data);
+        // console.log("data", response.data);
       } catch (error) {
         console.log("Error : ", error);
       }
@@ -32,14 +33,14 @@ function BlogList() {
               <div className="col-lg-4 col-md-6 col-sm-12 col-12">
                 {/* <!-- blog-single area start --> */}
                 <div className="blog-single-one text-center">
-                  <a href="blog-details.html" className="thumbnail">
+                  <Link to={`/blogdesc/${b._id}`} className="thumbnail">
                     <div className="inner">
                       <img
                         src={`${process.env.REACT_APP_API_URL_ECOSOCH}/${b.blogImage}`}
                         alt="blog-image"
                       />
                     </div>
-                  </a>
+                  </Link>
                   <div className="head">
                     <div className="date-area single-info">
                       <MdOutlineCalendarMonth className="blogdatecal" />
@@ -58,10 +59,13 @@ function BlogList() {
                         {b.blogTitle}
                       </h5>
                     </a>
-                    <a href="/Blogs" className="rts-btn btn-border radious-0">
+                    <Link
+                      to={`/blogdesc/${b._id}`}
+                      className="rts-btn btn-border radious-0"
+                    >
                       Read Details &nbsp;
                       <TfiArrowTopRight />{" "}
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 {/* <!-- blog-single area end --> */}

@@ -47,6 +47,8 @@ import SolarCare from "./Pages/SolarCare";
 import ProjectDevelopment from "./Pages/ProjectDevelopment";
 import LatestDesc from "./components/Latest/LatestDesc";
 import LatestEventDesc from "./components/Latest/LatestEventDesc";
+import ProjectDesc from "./components/ProjectDescription/ProjectDesc";
+import BlogDesc from "./components/Blogs/BlogDesc";
 
 function App() {
   window.addEventListener("scroll", function () {
@@ -99,6 +101,8 @@ function App() {
           <Route path="/projectdevelopment" Component={ProjectDevelopment} />
           <Route path="/newnews/:_ID" Component={LatestDesc} />
           <Route path="/newevent/:_ID" Component={LatestEventDesc} />
+          <Route path="/projectdesc/:_ID" Component={ProjectDesc} />
+          <Route path="/blogdesc/:_ID" Component={BlogDesc} />
         </Routes>
       </BrowserRouter>
       <Footer />

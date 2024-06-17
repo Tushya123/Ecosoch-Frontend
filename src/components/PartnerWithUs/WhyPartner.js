@@ -44,9 +44,6 @@ function WhyPartner() {
                   yourself with an industry leader and gain access to a strong
                   brand that inspires trust and confidence among customers.{" "}
                 </p>
-                <a href="service-details.html" className="read-more-btn">
-                  Read More &nbsp; <FaArrowRight />
-                </a>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12 col-12">
@@ -98,9 +95,6 @@ function WhyPartner() {
                   structure is designed to reward your dedication and provide a
                   substantial income stream.{" "}
                 </p>
-                <a href="service-details.html" className="read-more-btn">
-                  Read More &nbsp; <FaArrowRight />
-                </a>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12 col-12">
@@ -128,9 +122,6 @@ function WhyPartner() {
                   joining forces with a company that has a proven track record
                   of excellence.{" "}
                 </p>
-                <a href="service-details.html" className="read-more-btn">
-                  Read More &nbsp; <FaArrowRight />
-                </a>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12 col-12">
@@ -158,9 +149,6 @@ function WhyPartner() {
                   resources you need to excel in your role as an Associate
                   Partner.{" "}
                 </p>
-                <a href="service-details.html" className="read-more-btn">
-                  Read More &nbsp; <FaArrowRight />
-                </a>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12 col-12">
@@ -187,9 +175,6 @@ function WhyPartner() {
                   a greener world for generations to come. Your efforts will
                   make a significant and positive impact on the environment.{" "}
                 </p>
-                <a href="service-details.html" className="read-more-btn">
-                  Read More &nbsp; <FaArrowRight />
-                </a>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12 col-12">
@@ -245,9 +230,6 @@ function WhyPartner() {
                   handhold you all the way until you become a full fledged
                   entreprenuer.{" "}
                 </p>
-                <a href="service-details.html" className="read-more-btn">
-                  Read More &nbsp; <FaArrowRight />
-                </a>
               </div>
             </div>
           </div>
